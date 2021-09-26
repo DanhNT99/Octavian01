@@ -1,0 +1,19 @@
+.hero {
+    padding: 230px 0 360px;
+    &-content {
+        max-width: 800px;
+        color: $white;
+    }
+    &-title {
+        font-size: 60px;
+        font-family: $font-secondary;
+        font-weight: 200;
+        line-height: lineH(60, 76);
+    }
+    &-detail {
+        margin: 60px 0 64px;
+        max-width: 520px;
+        line-height: lineH(24, 36);
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,18 @@
+@import './atributes/variable';
+
+@font-face {
+    font-family: $font-primary;
+    src: url(../fonts/#{$font-primary}/#{$font-primary}-Regular.ttf);
+}
+@font-face {
+    font-family: $font-secondary;
+    src: url(../fonts/#{$font-secondary}/#{$font-secondary}-Regular.ttf);
+}
+@font-face {
+    font-family: $font-secondary-bold;
+    src: url(../fonts/Raleway/#{$font-secondary-bold}.ttf);
+}
+@font-face {
+    font-family: $font-primary-bold;
+    src: url(../fonts/OpenSans/#{$font-primary-bold}.ttf);
+}

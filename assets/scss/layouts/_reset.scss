@@ -1,0 +1,30 @@
+*{
+   margin: 0;
+   padding: 0;
+}
+*,
+*::after,
+*::before {
+   box-sizing: border-box;
+}
+
+input,
+textarea,
+select,
+button {
+   cursor: pointer;
+   outline: none;
+   border: 0;
+}
+
+a {
+   text-decoration: none;
+}
+li{
+   list-style: none;
+}
+img {
+   display: block;
+   max-width: 100%;
+   object-fit: cover;
+}
