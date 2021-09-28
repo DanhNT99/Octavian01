@@ -22,6 +22,10 @@ body {
    &--primary {
       background: $blue;
    }
+   &--secondary {
+      background: $green;
+      color: $blue;
+   }
 }
 .title {
    font-size: 36px;

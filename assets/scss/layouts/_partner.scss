@@ -1,0 +1,33 @@
+.partner {
+    &-container {
+        max-width: 1500px;
+    }
+    &-main {
+        padding: 150px 165px;
+        background: $blue;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 0 285px;
+    }
+    &-content {
+        max-width: 370px;
+    }
+    &-title {
+        color: $white;
+    }
+    &-desc {
+        color: $white;
+        opacity: 0.9;
+    }
+    &-images {
+        display: flex;
+        align-items: center;
+        gap: 0 180px;
+    }
+    &-column {
+        display: flex;
+        flex-direction: column;
+        gap: 80px 0;
+    }
+}

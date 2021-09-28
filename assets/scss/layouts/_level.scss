@@ -1,0 +1,34 @@
+.level {
+    &-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 130px;
+    }
+    &-left {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 30px;
+    }
+    &-boxs {
+        .level-box-small {
+            padding: 80px 70px;
+        }
+    }
+    &-box-small {
+        padding: 80px;
+        box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+        border-radius: 6px;
+        width: fit-content;
+    }
+    &-box-big {
+        padding: 80px 100px;
+        background: $blue;
+        margin-bottom: 30px;
+        border-radius: 6px;
+    }
+    &-content {
+        max-width: 370px;
+    }
+}

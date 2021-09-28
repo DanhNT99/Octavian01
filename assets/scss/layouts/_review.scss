@@ -1,0 +1,38 @@
+.review {
+    &-main {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0 30px;
+    }
+    &-img {
+        width: 370px;
+    }
+    &-content {
+        border-radius: 10px;
+        position: relative;
+        text-align: center;
+        padding: 70px 80px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    &-text {
+        font-size: 30px;
+        line-height: lineH(30, 48);
+        strong {
+            color: $black;
+        }
+    }
+    &-icon {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+    }
+    &-author {
+        display: inline-block;
+        font-family: $font-secondary;
+        font-weight: 600;
+        color: $gray;
+        margin: 60px auto 0;
+    }
+}
