@@ -2,11 +2,23 @@ body {
    font-size: 18px;
    line-height: 1;
    font-family: $font-primary;
-   background: url('../images/background.jpg') no-repeat top / 100%;
+   background: url('../images/background.jpg') no-repeat;
+   background-size: 100% 1082px;
    background-color: $white;
    max-width: 1920px;
    margin: 0 auto;
    overflow-x: hidden;
+   @include maxw(1023px) {
+      background-size: 100% 620px;
+   }
+   @include maxw(767px) {
+      background-size: 100% 474px;
+   }
+}
+.header,
+.footer,
+section {
+   display: none;
 }
 .container {
    max-width: 1200px;
@@ -26,15 +38,28 @@ body {
       background: $green;
       color: $blue;
    }
+   @include maxw(767px) {
+      padding: 15px 40px;
+      font-size: 16px;
+   }
 }
 .title {
    font-size: 36px;
    line-height: lineH(36, 56);
    color: $gray-dark;
    font-family: $font-secondary-bold;
+   @include maxw(767px) {
+      font-size: 25px;
+   }
 }
 .desc {
    line-height: lineH(18, 34);
    color: $gray;
    margin: 60px 0 70px;
+   @include maxw(1023px) {
+      margin: 40px 0 50px;
+   }
+   @include maxw(767px) {
+      margin: 20px 0 25px;
+   }
 }

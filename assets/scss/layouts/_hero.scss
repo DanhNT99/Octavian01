@@ -1,4 +1,5 @@
 .hero {
+    display: block;
     padding: 230px 0 360px;
     &-content {
         max-width: 800px;
@@ -15,5 +16,27 @@
         max-width: 520px;
         line-height: lineH(24, 36);
         font-size: 24px;
+    }
+    @include maxw(1023px) {
+        padding: 150px 0;
+        &-content {
+            text-align: center;
+        }
+        &-title {
+            font-size: 40px;
+        }
+        &-detail {
+            margin: 40px auto;
+        }
+    }
+    @include maxw(767px) {
+        padding: 100px 0;
+        &-title {
+            font-size: 30px;
+        }
+        &-detail {
+            font-size: 18px;
+            margin: 30px auto;
+        }
     }
 }
