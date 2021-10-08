@@ -1,4 +1,5 @@
 .partner {
+    display: block;
     &-container {
         max-width: 1500px;
     }
@@ -8,7 +9,8 @@
         border-radius: 20px;
         display: flex;
         align-items: center;
-        gap: 0 285px;
+        justify-content: space-between;
+        gap: 0 70px;
     }
     &-content {
         max-width: 370px;
@@ -23,11 +25,41 @@
     &-images {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 0 180px;
+    }
+    &-img {
+        max-width: 100px;
     }
     &-column {
         display: flex;
         flex-direction: column;
         gap: 80px 0;
     }
+    @include maxw(1460px) {
+        &-images {
+            gap: 0 100px;
+        }
+    }
+    @include maxw(1460px) {
+        &-images {
+            gap: 0 50px;
+        }
+    }
+    @include maxw(1023px) {
+        &-main {
+            padding: 70px 20px;
+            flex-direction: column;
+            gap: 30px 0;
+        }
+        &-content {
+            max-width: 100%;
+        }
+    }
+    @include maxw(1023px) {
+        &-main {
+            padding: 50px 20px;
+        }
+    }
+    
 }

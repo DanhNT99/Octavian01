@@ -11,8 +11,17 @@
         align-items: center;
         gap: 0 70px;
     }
+    @include maxw(767px) {
+        padding: 20px 0;
+        &-tool {
+            gap: 0 30px;
+        }
+    }
 }
 .menu {
+    &-icon {
+        display: none;
+    }
     &-list {
         display: flex;
         align-items: center;
@@ -23,5 +32,47 @@
         color: $white;
         display: flex;
         align-items: center;
+    }
+    @include maxw(1023px) {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 300px;
+        background-color: $white;
+        z-index: 1000;
+        transform: translateX(100%);
+        transition: all 0.3s ease;
+        &-show {
+            transform: translateX(0);
+        }
+        &-icon {
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+        }
+        &-list {
+            margin-top: 70px;
+            flex-direction: column;
+            gap: 15px 0;
+        }
+        &-item {
+            padding: 0 15px;
+            width: 100%;
+        }
+        &-link {
+            display: block;
+            padding: 15px 15px;
+            color: $blue;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            &:hover {
+                color: $white;
+                background-color: $blue;
+            }
+        }
     }
 }
