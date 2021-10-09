@@ -1,3 +1,104 @@
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-slide:focus, .slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  display: table;
+  content: '';
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -518,25 +619,20 @@ body {
 
 .project-slider {
   margin-top: 100px;
+  padding: 0 75px;
 }
 
 .project-blogs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 0 75px;
-  gap: 0 30px;
+  margin: 0 -15px;
 }
 
 .project-blogs-item {
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
   height: 410px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  margin: 0 15px;
 }
 
 .project-blogs-item img {
@@ -580,39 +676,8 @@ body {
   font-size: 36px;
 }
 
-.project-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 70px auto 0;
-  gap: 0 15px;
-}
-
-.project-btn-item {
-  width: 15px;
-  height: 15px;
-  border-radius: 100rem;
-  background-color: #c8c7fb;
-}
-
-.project-btn-active {
-  width: 25px;
-  height: 25px;
-  border: 5px solid #c8c7fb;
-  background-color: #2d63d1;
-}
-
 @media screen and (max-width: 1499px) {
-  .project-blogs {
+  .project-slider {
     padding: 0 30px;
   }
 }
@@ -621,6 +686,9 @@ body {
   .project {
     margin-top: 70px;
     padding: 70px 0;
+  }
+  .project-slider {
+    padding: 0 15px;
   }
   .project-desc {
     margin-top: 40px;
@@ -638,8 +706,50 @@ body {
   .project-desc {
     margin-top: 20px;
   }
-  .project-slider, .project-btn {
-    margin-top: 30px;
+  .project-blogs-item {
+    height: 350px;
+  }
+}
+
+.slick-dots {
+  margin-top: 70px;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 15px;
+}
+
+.slick-dots li {
+  width: 15px;
+  height: 15px;
+  border-radius: 100rem;
+  background-color: #c8c7fb;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active {
+  width: 25px;
+  height: 25px;
+  border: 5px solid #c8c7fb;
+  background-color: #2d63d1;
+}
+
+.slick-dots button {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .slick-dots {
+    margin-top: 50px;
   }
 }
 

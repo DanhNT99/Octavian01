@@ -12,19 +12,18 @@
     }
     &-slider {
         margin-top: 100px;
+        padding: 0 75px;
     }
     &-blogs {
-        display: flex;
-        padding: 0 75px;
-        gap: 0 30px;
+        margin: 0 -15px;
     }
     &-blogs-item {
         position: relative;
-        flex: 1;
         height: 410px;
         border-radius: 10px;
         overflow: hidden;
         cursor: pointer;
+        margin: 0 15px;
         img {
             position: relative;
             width: 100%;
@@ -56,34 +55,17 @@
         font-family: $font-secondary-bold;
         font-size: 36px;
     }
-    &-btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: fit-content;
-        margin: 70px auto 0;
-        gap: 0 15px;
-    }
-    &-btn-item {
-        width: 15px;
-        height: 15px;
-        border-radius: 100rem;
-        background-color: $blue-ligth;
-    }
-    &-btn-active {
-        width: 25px;
-        height: 25px;
-        border: 5px solid $blue-ligth;
-        background-color: $blue;
-    }
     @include maxw(1499px) {
-        &-blogs {
+        &-slider {
             padding: 0 30px;
         }
     }
     @include maxw(1023px) {
         margin-top: 70px;
         padding: 70px 0;
+        &-slider {
+            padding: 0 15px;
+        }
         &-desc {
             margin-top: 40px;
         }
@@ -97,8 +79,36 @@
         &-desc {
             margin-top: 20px;
         }
-        &-slider, &-btn {
-            margin-top: 30px;
+        &-blogs-item {
+            height: 350px;
         }
+    }
+}
+.slick-dots {
+    margin-top: 70px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 0 15px;
+    li {
+        width: 15px;
+        height: 15px;
+        border-radius: 100rem;
+        background-color: $blue-ligth;
+        transition: background-color 0.3s ease;
+        cursor: pointer;
+        &.slick-active {
+            width: 25px;
+            height: 25px;
+            border: 5px solid $blue-ligth;
+            background-color: $blue;
+        }
+    }
+    button {
+        display: none;
+    }
+    @include maxw(1023px){
+        margin-top: 50px;
     }
 }
