@@ -335,7 +335,7 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    gap: 15px 0;
+    gap: 10px 0;
   }
   .menu-item {
     padding: 0 15px;
@@ -1217,6 +1217,9 @@ body {
   }
   .contact-desc {
     margin: 40px 0 50px;
+  }
+  .contact-form {
+    padding: 0;
   }
 }
 
