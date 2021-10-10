@@ -22,7 +22,6 @@ function setBgSizeForBody () {
     let heightHero = $('.hero').height()
     $('body').css({'backgroundSize': `100% ${heightHeader + heightHero}px`})
 }
-    
 $('.project-blogs').slick({
     dots: true,
     slidesToShow: 3,
@@ -34,4 +33,7 @@ $('.project-blogs').slick({
         {  breakpoint: 767,  settings: { slidesToShow: 1 } }
     ]
   });
+    $('.footer-rock').click(function() {
+      $('body, html').animate({ scrollTop: 0 },  "slow")
+    })
 });

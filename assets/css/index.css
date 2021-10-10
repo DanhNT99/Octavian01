@@ -1347,6 +1347,7 @@ body {
   border-radius: 6px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .footer-rock-icon {
