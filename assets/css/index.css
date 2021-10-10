@@ -1135,20 +1135,24 @@ body {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .contact-container {
   max-width: 630px;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-title {
+  text-align: center;
   color: #ffffff;
 }
 
 .contact-desc {
   color: #ffffff;
   text-align: center;
-  margin: 45px auto 100px auto;
+  margin: 45px 0 100px;
 }
 
 .contact-form {
@@ -1203,8 +1207,26 @@ body {
   background-image: linear-gradient(to right, #eb7ceb, #feac3c);
 }
 
-.footer {
-  display: none;
+@media screen and (max-width: 1023px) {
+  .contact {
+    padding: 70px 0;
+  }
+  .contact-field {
+    padding: 10px;
+    margin-bottom: 20px;
+  }
+  .contact-desc {
+    margin: 40px 0 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contact {
+    padding: 50px 0;
+  }
+  .contact-desc {
+    margin: 25px 0 30px;
+  }
 }
 
 .footer-top {
@@ -1327,5 +1349,45 @@ body {
 .footer-rock-icon {
   width: 30px;
   height: 30px;
+}
+
+@media screen and (max-width: 1023px) {
+  .footer-top {
+    padding: 70px 0px;
+  }
+  .footer-main {
+    gap: 0 30px;
+  }
+  .footer-nav {
+    gap: 20px 0;
+  }
+  .footer-detail {
+    margin: 30px 0 25px;
+  }
+  .footer-phone:last-child {
+    margin-top: 10px;
+  }
+  .footer-rock {
+    right: 15px;
+    padding: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-top {
+    padding: 50px 0;
+  }
+  .footer-main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 30px 0;
+  }
+  .footer-container p {
+    line-height: 1.5;
+    text-align: center;
+  }
+  .footer-rock {
+    padding: 15px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

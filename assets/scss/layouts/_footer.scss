@@ -1,6 +1,4 @@
 .footer {
-    display: none;
-    // display: block;
     &-top {
         padding: 150px 0;
         background-color: $bg-gray;
@@ -92,52 +90,45 @@
         width: 30px;
         height: 30px;
     }
-    // @include maxw(1023px) {
-    //     &-top {
-    //         padding: 240px 0 60px;
-    //     }
-    //     &-main {
-    //         gap: 0 30px
-    //     }
-    //     &-container {
-    //         padding-top: 30px;
-    //         padding-bottom: 30px;
-    //     }
-    //     &-nav {
-    //         gap: 20px 0;
-    //     }
-    //     &-detail {
-    //         margin: 30px 0px 25px 0px;
-    //     }
-    //     &-phone {
-    //         &:last-child {
-    //             margin-top: 10px;
-    //         }
-    //     }
-    // }
-    // @include maxw(767px) {
-    //     &-top {
-    //         padding: 180px 0 50px;
-    //     }
-    //     &-main {
-    //         grid-template-columns: 1fr;
-    //         grid-gap: 40px 0;
-    //     }
-    //     &-detail {
-    //         margin: 30px 0px 25px 0px;
-    //     }
-    //     &-title {
-    //         margin-bottom: 25px;
-    //     }
-    //     &-container {
-    //         p {
-    //             line-height: 1.5;
-    //             text-align: center;
-    //         }
-    //     }
-    //     &-rock {
-    //         right: 15px;
-    //         padding: 15px;
-    //     }
-    // }
+    @include maxw(1023px) {
+         &-top {
+             padding: 70px 0px;
+        }
+        &-main {
+            gap: 0 30px
+        }
+        &-nav {
+            gap: 20px 0;
+        }
+        &-detail {
+            margin: 30px 0 25px ;
+        }
+        &-phone {
+            &:last-child {
+                margin-top: 10px;
+            }
+        }
+        &-rock {
+            right: 15px;
+            padding: 25px;
+        }
+    }   
+    @include maxw(767px) {
+        &-top {
+            padding: 50px 0;
+        }
+        &-main {
+            grid-template-columns: 1fr;
+            grid-gap: 30px 0;
+        }
+        &-container {
+            p {
+                line-height: 1.5;
+                text-align: center;
+            }
+        }
+        &-rock {
+            padding: 15px;
+        }
+    }
 }
